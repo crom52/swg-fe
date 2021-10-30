@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Fashi Template">
+    <meta name="description" content="STC Fashion">
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -74,13 +74,13 @@
                         </div>
                     </div>
                     <div class="col-lg-7 col-md-7">
-                        <div class="advanced-search">
-                            <button type="button" class="category-btn">All Categories</button>
-                            <form action="#" class="input-group">
-                                <input type="text" placeholder="What do you need?">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </form>
-                        </div>
+                        <div class="search">
+                            <input type="text" class="search-term" placeholder="What are you looking for?">
+                            <button type="submit" class="search-button">
+                              <i class="fa fa-search"></i>
+                           </button>
+                         </div>
+                    </div>
                     </div>
                     <div class="col-lg-3 text-right col-md-3">
                         <ul class="nav-right">
@@ -357,9 +357,9 @@
                         <div class="col-lg-6">
                             <div class="product-details">
                                 <div class="pd-title">
-                                    <span>oranges</span>
-                                    <h3>Pure Pineapple</h3>
-                                    <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
+                                    <span id="pd-brand-value">oranges</span>
+                                    <h3 id="pd-title-value">Pure Pineapple</h3>
+                                    <a  class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
                                 <div class="pd-rating">
                                     <i class="fa fa-star"></i>
@@ -370,11 +370,12 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur ing elit, sed do eiusmod tempor sum dolor
+                                    <p id="pd-short-desc-value">Lorem ipsum dolor sit amet, consectetur ing elit, sed do eiusmod tempor sum dolor
                                         sit amet, consectetur adipisicing elit, sed do mod tempor</p>
-                                    <h4>$495.00 <span>629.99</span></h4>
+                                        <span id="pd-price-value">629.99</span>
+                                        <h4 id="pd-discount-price-value">$495.00 </h4>
                                 </div>
-                                <div class="pd-color">
+                                <!-- <div class="pd-color">
                                     <h6>Color</h6>
                                     <div class="pd-color-choose">
                                         <div class="cc-item">
@@ -390,7 +391,7 @@
                                             <label for="cc-violet" class="cc-violet"></label>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="pd-size-choose">
                                     <div class="sc-item">
                                         <input type="radio" id="sm-size">
@@ -413,14 +414,15 @@
                                     <div class="pro-qty">
                                         <input type="text" value="1">
                                     </div>
-                                    <a href="#" class="primary-btn pd-cart">Add To Cart</a>
+                                    <a class="primary-btn pd-buy-now">Buy Now</a>
+                                    <a><img class ="cart-icon" src = "img/cart-icon.png"></img></a>
                                 </div>
                                 <ul class="pd-tags">
-                                    <li><span>CATEGORIES</span>: More Accessories, Wallets & Cases</li>
-                                    <li><span>TAGS</span>: Clothing, T-shirt, Woman</li>
+                                    <li  id="category-value">CATEGORIES: <span></span></li>
+                                    <li id="tag-value" >TAGS: <span></span></li>
                                 </ul>
                                 <div class="pd-share">
-                                    <div class="p-code">Sku : 00012</div>
+                                    <!-- <div class="p-code">Sku : 00012</div> -->
                                     <div class="pd-social">
                                         <a href="#"><i class="ti-facebook"></i></a>
                                         <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -434,13 +436,13 @@
                         <div class="tab-item">
                             <ul class="nav" role="tablist">
                                 <li>
-                                    <a class="active" data-toggle="tab" href="#tab-1" role="tab">DESCRIPTION</a>
+                                    <a class="active pd-desc-tab " data-toggle="tab" href="#tab-1" role="tab">MÔ TẢ SẢN PHẨM</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a data-toggle="tab" href="#tab-2" role="tab">SPECIFICATIONS</a>
-                                </li>
+                                </li> -->
                                 <li>
-                                    <a data-toggle="tab" href="#tab-3" role="tab">Customer Reviews (02)</a>
+                                    <a class = "pd-feedback " data-toggle="tab" href="#tab-3" role="tab">ĐÁNH GIÁ</a> 
                                 </li>
                             </ul>
                         </div>
@@ -449,17 +451,8 @@
                                 <div class="tab-pane fade-in active" id="tab-1" role="tabpanel">
                                     <div class="product-content">
                                         <div class="row">
-                                            <div class="col-lg-7">
-                                                <h5>Introduction</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
-                                                <h5>Features</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip ex ea commodo consequat. Duis aute irure dolor in </p>
+                                            <div class="col-lg-7" id="pd-desc">
+                                            
                                             </div>
                                             <div class="col-lg-5">
                                                 <img src="img/product-single/tab-desc.jpg" alt="">
@@ -471,40 +464,15 @@
                                     <div class="specification-table">
                                         <table>
                                             <tr>
-                                                <td class="p-catagory">Customer Rating</td>
-                                                <td>
-                                                    <div class="pd-rating">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-o"></i>
-                                                        <span>(5)</span>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
                                                 <td class="p-catagory">Price</td>
                                                 <td>
                                                     <div class="p-price">$495.00</div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="p-catagory">Add To Cart</td>
-                                                <td>
-                                                    <div class="cart-add">+ add to cart</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
                                                 <td class="p-catagory">Availability</td>
                                                 <td>
                                                     <div class="p-stock">22 in stock</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="p-catagory">Weight</td>
-                                                <td>
-                                                    <div class="p-weight">1,3kg</div>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -517,18 +485,12 @@
                                                 <td class="p-catagory">Color</td>
                                                 <td><span class="cs-color"></span></td>
                                             </tr>
-                                            <tr>
-                                                <td class="p-catagory">Sku</td>
-                                                <td>
-                                                    <div class="p-code">00012</div>
-                                                </td>
-                                            </tr>
                                         </table>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="tab-3" role="tabpanel">
                                     <div class="customer-review-option">
-                                        <h4>2 Comments</h4>
+                                        <h4>Bình luận</h4>
                                         <div class="comment-option">
                                             <div class="co-item">
                                                 <div class="avatar-pic">
@@ -564,7 +526,7 @@
                                             </div>
                                         </div>
                                         <div class="personal-rating">
-                                            <h6>Your Ratind</h6>
+                                            <h6>Your Rating</h6>
                                             <div class="rating">
                                                 <i class="fa fa-star"></i>
                                                 <i class="fa fa-star"></i>
@@ -622,7 +584,7 @@
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="#">+ Quick View</a></li>
+                                <li class="quick-view"><a href="#">Add to cart</a></li>
                                 <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
                             </ul>
                         </div>
@@ -646,9 +608,9 @@
                                 <i class="icon_heart_alt"></i>
                             </div>
                             <ul>
-                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="#">+ Quick View</a></li>
-                                <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
+                                <li class="w-icon active"><a ><i class="icon_bag_alt"></i></a></li>
+                                <li class="quick-view"><a>Add to cart</a></li>
+                                <li class="w-icon"><a ><i class="fa fa-random"></i></a></li>
                             </ul>
                         </div>
                         <div class="pi-text">
@@ -671,7 +633,7 @@
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="#">+ Quick View</a></li>
+                                <li class="quick-view"><a href="#">Add to cart</a></li>
                                 <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
                             </ul>
                         </div>
@@ -695,7 +657,7 @@
                             </div>
                             <ul>
                                 <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="#">+ Quick View</a></li>
+                                <li class="quick-view"><a href="#">Add to cart</a></li>
                                 <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
                             </ul>
                         </div>
@@ -835,6 +797,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/commonfunction.js"></script>
+    <script src="js/product/product.js"></script>
 </body>
 
 </html>
