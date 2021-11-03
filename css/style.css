@@ -4444,3 +4444,30 @@ ol {
   width: 40px;
   cursor: pointer;
 }
+
+.cart-icon-slide {
+  width: 35px;
+  margin-top: 10px;
+  height: 30px;
+  padding-bottom: -10px;
+}
+
+.home-item-slide {
+  width: 42px;
+  margin-bottom: -20px;
+  height: 54px;
+  margin-right: -5px;
+}
+.pi-pic > ul {
+  cursor: pointer;
+}
+
+/* Alert success
+*/
+.alert-success {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 30%;
+  z-index: 100;
+}
