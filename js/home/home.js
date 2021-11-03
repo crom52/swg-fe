@@ -130,6 +130,9 @@ const loadFeaturedProduct = (productList) => {
     $(`${itemSliderTopEle} .pi-text .product-price`).text(
       product.price.toLocaleString()
     );
+
+    //Attach event onclick
+    attachClickProductHomePage(itemSliderTopEle, product.productId);
   });
 
   /** Slider Bottom  */
@@ -149,5 +152,14 @@ const loadFeaturedProduct = (productList) => {
     $(`${itemSliderBotEle} .pi-text .product-price`).text(
       product.price.toLocaleString()
     );
+
+    //Attach event onclick
+    attachClickProductHomePage(itemSliderBotEle, product.productId);
+  });
+};
+
+const attachClickProductHomePage = (elementClass, productId) => {
+  $(elementClass).on('click', '', () => {
+    window.location.href = `/product.html?id=${productId}`;
   });
 };
