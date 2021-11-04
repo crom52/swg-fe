@@ -118,7 +118,7 @@ const loadFeaturedProduct = (productList) => {
     let itemSliderTopEle = `.slider-top .item-${i + 1}`;
 
     // Image
-    $(`${itemSliderTopEle} .pi-pic .prod-img`).attr('src', product.img);
+    $(`${itemSliderTopEle} .prod-img`).attr('src', product.img);
 
     //Product Id
     $(`${itemSliderTopEle}`).attr('pro-id', product.productId);
@@ -132,7 +132,10 @@ const loadFeaturedProduct = (productList) => {
     );
 
     //Attach event onclick
-    attachClickProductHomePage(itemSliderTopEle, product.productId);
+    attachClickProductHomePage(
+      `${itemSliderTopEle} .prod-img`,
+      product.productId
+    );
   });
 
   /** Slider Bottom  */
@@ -140,7 +143,7 @@ const loadFeaturedProduct = (productList) => {
     let itemSliderBotEle = `.slider-bottom .item-${i + 1}`;
 
     // Image
-    $(`${itemSliderBotEle} .pi-pic .prod-img`).attr('src', product.img);
+    $(`${itemSliderBotEle} .prod-img`).attr('src', product.img);
 
     //Product Id
     $(`${itemSliderBotEle}`).attr('pro-id', product.productId);
@@ -154,7 +157,10 @@ const loadFeaturedProduct = (productList) => {
     );
 
     //Attach event onclick
-    attachClickProductHomePage(itemSliderBotEle, product.productId);
+    attachClickProductHomePage(
+      `${itemSliderBotEle} .prod-img`,
+      product.productId
+    );
   });
 };
 

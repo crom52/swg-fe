@@ -16,14 +16,6 @@ const CommonFunc = (() => {
   });
 
   /**Click Item -> Show Product Detail (S) */
-  $('.product-item > .pi-pic > .prod-img').on('click', () => {
-    let productId = $('.product-item').attr('pro-id');
-    click();
-  });
-
-  click = (productId) => {
-    window.location.href = `/product.html?id=${productId}`;
-  };
 
   /**Main Page(E) */
 
