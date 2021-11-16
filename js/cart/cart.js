@@ -72,7 +72,12 @@ $(document).ready(async () => {
   //    let orderItems = Api.getOrderItems();
   await renderListItem(orderItems);
   attachEvent();
+  calculateTotal();
 });
+
+const getCartItemsBySession = () => {
+  //call api
+};
 
 const renderListItem = async (orderItems) => {
   let cartTable = $('.cart-table tbody');
@@ -132,8 +137,20 @@ const onChangeQty = () => {
 
     setQtyHtml(productId, quantity);
     setItemTotalPrice(productId, itemPrice);
+    calculateTotal();
   });
 };
+
+const calculateTotal = () => {
+  let listItem = $('.cart-table tbody').children();
+  let total = 0;
+  for (let el of listItem) {
+    total += toNumber($(el).children('.total-price').text());
+  }
+  $('.cart-total span').text(total.toLocaleString());
+  $('.cart-total span').val(total);
+};
+
 const increaseItemClick = () => {
   $('.inc').on('click', function () {
     let productId = $(this).parents('.ord-item').attr('prod-id');
@@ -151,6 +168,7 @@ const increaseItemClick = () => {
 
     setQtyHtml(productId, quantity);
     setItemTotalPrice(productId, itemPrice.toLocaleString());
+    calculateTotal();
   });
 };
 
@@ -173,10 +191,28 @@ const decreaseItemClick = () => {
       setQtyHtml(productId, quantity);
       setItemTotalPrice(productId, itemPrice.toLocaleString());
     }
+    calculateTotal();
   });
 };
+
+onClickRemoveItem = () => {
+  $('.ti-close').on('click', function () {
+    let confirm = window.confirm('Bạn có muốn xóa sản phẩm này ? ');
+    if (confirm) {
+      $(this).parents('.ord-item').remove();
+      // $(".ord-item[prod-id=SP3]").remove()
+      calculateTotal();
+    }
+  });
+};
+
+const toNumber = (string) => {
+  return Number(string.toString().replaceAll(',', '').replaceAll('.', ''));
+};
+
 const attachEvent = () => {
   onChangeQty();
   decreaseItemClick();
   increaseItemClick();
+  onClickRemoveItem();
 };
