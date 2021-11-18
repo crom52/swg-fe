@@ -2717,7 +2717,7 @@ ol {
   text-transform: uppercase;
 }
 
-.cart-table table tr th.p-name {
+.cart-table table tr {
   text-align: left;
 }
 
@@ -2734,7 +2734,7 @@ ol {
   width: 21%;
 }
 
-.cart-table table tr td.cart-title {
+.cart-table table tr {
   text-align: left;
 }
 
@@ -4468,6 +4468,7 @@ ol {
   position: fixed;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 35%;
+  height: 7%;
   z-index: 100;
 }

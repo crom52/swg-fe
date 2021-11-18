@@ -84,6 +84,13 @@ let productItemSample = [
   },
 ];
 
+const Home = (() => {
+  let productList = productItemSample;
+  return {
+    productList,
+  };
+})();
+
 //After render page
 $(document).ready(function () {
   loadFeaturedProduct(productItemSample);

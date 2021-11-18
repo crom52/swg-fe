@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="js/cart/cart.css" type="text/css">
+
 </head>
 
 <body>
@@ -214,12 +216,12 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Image</th>
-                                    <th class="p-name">Product Name</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th><i class="ti-close"></i></th>
+                                    <th>Hình ảnh</th>
+                                    <th class="p-name">Tên sản phẩm</th>
+                                    <th>Đơn giá </th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng</th>
+                                    <th></i></th>
                                 </tr>
                             </thead>
                             <tbody> 
@@ -227,7 +229,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-4">
                             <div class="cart-buttons">
                                 <a href="#" class="primary-btn continue-shop">Continue shopping</a>
@@ -240,8 +242,8 @@
                                     <button type="submit" class="site-btn coupon-btn">Apply</button>
                                 </form>
                             </div>
-                        </div>
-                        <div class="col-lg-4 offset-lg-4">
+                        </div> -->
+                        <div class="checkout">
                             <div class="proceed-checkout">
                                 <ul>
                                     <li class="subtotal">Subtotal <span>$240.00</span></li>
@@ -367,6 +369,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
